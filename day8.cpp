@@ -43,7 +43,6 @@ int main() {
         y = 0;
     }
 
-    int64_t distance;
     int64_t x_distance, y_distance;
     // Loop is a bit messy but it works
     for (auto const &[antenna_type, antenna_list]: antennas) {
@@ -55,7 +54,6 @@ int main() {
                 auto const &a2 = antenna_list[j];
                 x_distance = std::abs(a1.first - a2.first);
                 y_distance = std::abs(a1.second - a2.second);
-                distance = x_distance + y_distance;
                 int64_t doubled_x_distance = x_distance << 1;
                 int64_t doubled_y_distance = y_distance << 1;
                 
